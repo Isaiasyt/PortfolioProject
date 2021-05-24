@@ -4,7 +4,7 @@ select *
 from CovidDeaths
 order by 1,2 
 
---- Looking at Total vs Total Deaths 
+--- Looking at Total Cases vs Total Deaths 
 --- Shows the likelihood of dying if you got infected with COVID in your country
 
 select Location, Date, total_cases, total_deaths, (total_deaths/total_cases) * 100  as death_percentage
@@ -13,7 +13,7 @@ where Location like '%states%'
 order by 1,2 
 
 
--- Looking at Total Case vs Population
+-- Looking at Total Cases vs Population
 -- to show what percentage of the population got COVID
 
 select Location, Date, population, total_cases, (total_cases/population) * 100  as infection_percentage
